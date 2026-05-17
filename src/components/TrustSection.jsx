@@ -5,7 +5,8 @@ const specs = [
   ["容量", "约 180ml，适合日常茶席"],
   ["结构", "壶嘴、壶盖、壶口细节可查看"],
   ["作品", "作者、底款、证书信息可核对"],
-  ["交付", "包装、养护说明与售后咨询"]
+  ["交付", "包装、养护说明与交付信息"],
+  ["咨询", "邮箱咨询：2635222735@qq.com；微信：ggjgj424，确认泥料、容量、底款与交付信息。"]
 ];
 
 export default function TrustSection() {
@@ -14,7 +15,7 @@ export default function TrustSection() {
       id="trust"
       eyebrow="TRUST"
       title="少一点修辞，多一点可确认。"
-      intro="泥料、容量、结构、交付与售后，清楚列出，方便判断。"
+      intro="泥料、容量、结构与交付，清楚列出，方便判断。"
       className="bg-[#0d0907]"
     >
       <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">

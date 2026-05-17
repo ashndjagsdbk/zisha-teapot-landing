@@ -22,12 +22,14 @@ export default function CTASection() {
             看清细节，再决定收藏。
           </h2>
           <p className="mt-7 max-w-md text-base leading-8 text-paper/68">
-            预约线上鉴赏，查看壶嘴、壶盖、泥料微距、泡养光泽与作品信息。
+            如需了解泥料、容量、底款、证书或定制信息，可以先发邮件咨询。
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <CTAButton href="mailto:hello@example.com">预约鉴赏</CTAButton>
-            <CTAButton href="mailto:hello@example.com" variant="secondary">
-              咨询这把壶
+            <CTAButton href="mailto:2635222735@qq.com?subject=紫砂壶咨询">
+              邮件咨询
+            </CTAButton>
+            <CTAButton href="#craft" variant="secondary">
+              查看工艺
             </CTAButton>
           </div>
         </div>
