@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">紫砂壶主视觉占位图</title>
+  <desc id="desc">可替换为真实紫砂壶主图的占位图。</desc>
+  <defs>
+    <radialGradient id="body" cx="42%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#c48766"/>
+      <stop offset="52%" stop-color="#8f523c"/>
+      <stop offset="100%" stop-color="#563126"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#d2aa6d" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#d2aa6d" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#d2aa6d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#140f0c" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="900" height="700" fill="none"/>
+  <ellipse cx="452" cy="593" rx="300" ry="46" fill="#120f0c" opacity="0.24"/>
+  <g filter="url(#shadow)">
+    <path d="M278 342c-84 28-142 14-167-29-23-40-2-83 45-94 56-12 91 14 111 47" fill="none" stroke="#7a4a38" stroke-width="46" stroke-linecap="round"/>
+    <path d="M633 333c61-50 111-64 151-42 39 22 41 72 8 101-35 31-88 24-159-17" fill="none" stroke="#7a4a38" stroke-width="42" stroke-linecap="round"/>
+    <path d="M252 317c30-126 126-188 234-188 116 0 206 72 232 190 34 156-77 250-233 250-162 0-270-93-233-252Z" fill="url(#body)"/>
+    <path d="M365 150c19-58 63-86 119-86 56 0 102 28 121 86" fill="#8f523c"/>
+    <path d="M348 161c20-27 68-44 136-44 70 0 119 17 140 44 16 20 5 47-22 54-55 15-180 15-235 0-27-7-36-34-19-54Z" fill="#7a4a38"/>
+    <path d="M436 89c8-25 26-37 47-37 22 0 40 12 48 37" fill="#9b6248"/>
+    <rect x="393" y="215" width="181" height="28" rx="14" fill="#6b3e31" opacity="0.72"/>
+    <path d="M302 339c52 81 323 81 375 0" fill="none" stroke="#d2aa6d" stroke-width="3" opacity="0.34"/>
+    <path d="M316 449c77 65 257 74 343-2" fill="none" stroke="#2d1b16" stroke-width="3" opacity="0.22"/>
+  </g>
+  <rect x="220" y="620" width="460" height="2" fill="url(#line)"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">工艺过程占位图</title>
+  <desc id="desc">可替换为手部制壶、工具、泥坯或窑烧照片。</desc>
+  <rect width="900" height="680" fill="#1f1d1a"/>
+  <rect x="76" y="74" width="748" height="520" rx="18" fill="#4f352b"/>
+  <path d="M152 480c88-44 164-66 231-66 92 0 152 52 249 52 62 0 107-20 151-45" fill="none" stroke="#d2aa6d" stroke-width="3" opacity="0.34"/>
+  <circle cx="430" cy="332" r="122" fill="#9b6248"/>
+  <path d="M336 326c28-56 75-84 142-84 68 0 114 29 138 88" fill="none" stroke="#e8ded1" stroke-width="12" opacity="0.62" stroke-linecap="round"/>
+  <path d="M248 236c68 50 115 86 139 108" stroke="#d8caba" stroke-width="28" opacity="0.42" stroke-linecap="round"/>
+  <path d="M644 213c-46 62-79 109-98 141" stroke="#d8caba" stroke-width="28" opacity="0.42" stroke-linecap="round"/>
+  <g fill="#d2aa6d" opacity="0.72">
+    <circle cx="196" cy="169" r="7"/>
+    <circle cx="696" cy="184" r="7"/>
+    <circle cx="724" cy="504" r="7"/>
+    <circle cx="176" cy="528" r="7"/>
+  </g>
+  <text x="102" y="124" fill="#e8ded1" font-family="Arial, sans-serif" font-size="22">/images/craft-process.svg</text>
+</svg>

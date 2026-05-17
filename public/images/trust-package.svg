@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">作者证书包装占位图</title>
+  <desc id="desc">可替换为作者、证书、包装与交付照片。</desc>
+  <rect width="900" height="1100" fill="#e8ded1"/>
+  <rect x="144" y="168" width="612" height="392" rx="18" fill="#7a4a38"/>
+  <rect x="184" y="210" width="532" height="292" rx="12" fill="#f4efe7" opacity="0.92"/>
+  <path d="M236 284h280M236 344h346M236 404h226" stroke="#81766c" stroke-width="12" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="642" cy="386" r="55" fill="none" stroke="#b88a4a" stroke-width="10"/>
+  <rect x="190" y="656" width="520" height="264" rx="18" fill="#5f716b"/>
+  <path d="M190 730h520" stroke="#a7b1aa" stroke-width="4" opacity="0.56"/>
+  <path d="M450 656v264" stroke="#a7b1aa" stroke-width="4" opacity="0.56"/>
+  <text x="148" y="110" fill="#4f4841" font-family="Arial, sans-serif" font-size="25">/images/trust-package.svg</text>
+</svg>

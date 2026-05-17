@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">泥料颗粒占位图</title>
+  <desc id="desc">可替换为泥料原矿、泥片或壶身微距照片。</desc>
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4"/>
+      <feDisplacementMap in="SourceGraphic" scale="16"/>
+    </filter>
+    <radialGradient id="clay" cx="35%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#c88a68"/>
+      <stop offset="0.55" stop-color="#9b6248"/>
+      <stop offset="1" stop-color="#5d352a"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="680" fill="#e8ded1"/>
+  <circle cx="430" cy="340" r="270" fill="url(#clay)" filter="url(#grain)"/>
+  <g opacity="0.24" fill="#2b1a14">
+    <circle cx="230" cy="220" r="10"/>
+    <circle cx="378" cy="160" r="6"/>
+    <circle cx="560" cy="258" r="8"/>
+    <circle cx="642" cy="430" r="11"/>
+    <circle cx="352" cy="470" r="7"/>
+    <circle cx="475" cy="360" r="5"/>
+  </g>
+  <path d="M150 540c142 58 422 64 604-46" fill="none" stroke="#d2aa6d" stroke-width="2" opacity="0.45"/>
+  <text x="56" y="84" fill="#4f4841" font-family="Arial, sans-serif" font-size="22">/images/clay-closeup.svg</text>
+</svg>

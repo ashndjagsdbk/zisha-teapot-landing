@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">三到六个月泡养阶段占位图</title>
+  <desc id="desc">可替换为长期使用后的壶面照片。</desc>
+  <rect width="900" height="680" fill="#e8ded1"/>
+  <circle cx="450" cy="342" r="210" fill="#85503b"/>
+  <circle cx="386" cy="276" r="156" fill="#d2aa6d" opacity="0.24"/>
+  <path d="M282 426c112 64 246 58 340-14" stroke="#d2aa6d" stroke-width="11" opacity="0.34" stroke-linecap="round"/>
+  <path d="M346 228c70-35 152-36 226-2" stroke="#f4efe7" stroke-width="4" opacity="0.26" stroke-linecap="round"/>
+  <text x="70" y="86" fill="#4f4841" font-family="Arial, sans-serif" font-size="24">3-6 个月 /images/patina-season.svg</text>
+</svg>

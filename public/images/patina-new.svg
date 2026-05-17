@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">新壶泡养阶段占位图</title>
+  <desc id="desc">可替换为新壶状态照片。</desc>
+  <rect width="900" height="680" fill="#e8ded1"/>
+  <circle cx="450" cy="342" r="210" fill="#8f523c"/>
+  <circle cx="390" cy="280" r="150" fill="#a96549" opacity="0.56"/>
+  <text x="70" y="86" fill="#4f4841" font-family="Arial, sans-serif" font-size="24">新壶 /images/patina-new.svg</text>
+</svg>

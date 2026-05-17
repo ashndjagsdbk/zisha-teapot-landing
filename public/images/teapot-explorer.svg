@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">器型结构探索占位图</title>
+  <desc id="desc">可替换为壶体正侧面或三维渲染图。</desc>
+  <defs>
+    <radialGradient id="body" cx="43%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#c78969"/>
+      <stop offset="56%" stop-color="#95573f"/>
+      <stop offset="100%" stop-color="#5c352a"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="680" fill="#eee4d7"/>
+  <ellipse cx="455" cy="552" rx="290" ry="38" fill="#1f1d1a" opacity="0.12"/>
+  <path d="M262 340c-60 16-108 2-133-35-21-33-11-70 26-83 46-15 86 10 112 49" fill="none" stroke="#7a4a38" stroke-width="40" stroke-linecap="round"/>
+  <path d="M624 334c81-54 138-66 171-36 28 25 16 66-18 83-36 18-83 6-152-27" fill="none" stroke="#7a4a38" stroke-width="38" stroke-linecap="round"/>
+  <path d="M255 315c28-112 118-168 225-168 105 0 192 63 218 171 31 129-69 211-218 211-150 0-256-80-225-214Z" fill="url(#body)"/>
+  <path d="M360 157c21-47 63-70 119-70 57 0 101 23 122 70" fill="#8f523c"/>
+  <path d="M348 164c23-21 68-33 132-33 66 0 112 12 135 33 20 18 10 43-18 50-52 13-181 13-233 0-27-7-37-32-16-50Z" fill="#754536"/>
+  <path d="M432 101c7-20 25-30 47-30s40 10 47 30" fill="#9b6248"/>
+  <path d="M309 346c49 67 296 67 344 0" fill="none" stroke="#e7c38b" stroke-width="3" opacity="0.42"/>
+  <path d="M335 438c76 44 214 46 294 0" fill="none" stroke="#2b1a14" stroke-width="3" opacity="0.24"/>
+  <text x="58" y="83" fill="#81766c" font-family="Arial, sans-serif" font-size="22">/images/teapot-explorer.svg</text>
+</svg>

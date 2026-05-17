@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">一个月泡养阶段占位图</title>
+  <desc id="desc">可替换为使用一个月后的壶面照片。</desc>
+  <rect width="900" height="680" fill="#e8ded1"/>
+  <circle cx="450" cy="342" r="210" fill="#92583f"/>
+  <circle cx="390" cy="280" r="150" fill="#bd7c59" opacity="0.5"/>
+  <path d="M298 420c104 52 229 48 322-10" stroke="#d2aa6d" stroke-width="8" opacity="0.28" stroke-linecap="round"/>
+  <text x="70" y="86" fill="#4f4841" font-family="Arial, sans-serif" font-size="24">1 个月 /images/patina-month.svg</text>
+</svg>
