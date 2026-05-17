@@ -71,14 +71,17 @@ export default function TeapotExplorerSection() {
               key={part.id}
               type="button"
               onClick={() => setActiveId(part.id)}
-              className={`absolute ${part.hotspot} z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border transition ${
+              className={`group absolute ${part.hotspot} z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border transition duration-300 ${
                 activeId === part.id
                   ? "border-teaLight bg-teaLight text-ink shadow-[0_0_34px_rgba(210,170,109,0.42)]"
-                  : "border-paper/34 bg-black/40 text-paper hover:border-teaLight/70 hover:bg-black/70"
+                  : "border-paper/34 bg-black/40 text-paper opacity-45 hover:border-teaLight/70 hover:bg-black/70 hover:opacity-100"
               }`}
               aria-label={`查看${part.label}`}
             >
               <span className="h-2.5 w-2.5 rounded-full bg-current" />
+              <span className="pointer-events-none absolute left-1/2 top-[-2.65rem] -translate-x-1/2 whitespace-nowrap border border-teaLight/30 bg-black/72 px-3 py-1.5 text-xs text-paper/76 opacity-0 backdrop-blur transition duration-300 group-hover:translate-y-[-2px] group-hover:opacity-100">
+                {part.label}
+              </span>
             </button>
           ))}
 
@@ -109,7 +112,10 @@ export default function TeapotExplorerSection() {
             看见结构。
           </h2>
 
-          <div className="mt-10 border-y border-paper/[0.07] py-6">
+          <div
+            key={activePart.id}
+            className="part-detail-panel mt-10 border-y border-paper/[0.07] py-6"
+          >
             <img
               src={activePart.image}
               alt={`${activePart.label}局部特写`}
@@ -123,10 +129,11 @@ export default function TeapotExplorerSection() {
                 {activePart.title}
               </h3>
               <div className="mt-7 flex flex-wrap gap-2">
-                {activePart.tags.map((tag) => (
+                {activePart.tags.map((tag, index) => (
                   <span
                     key={tag}
-                    className="border border-paper/[0.10] px-3 py-1.5 text-xs text-paper/58"
+                    className="part-tag border border-paper/[0.10] px-3 py-1.5 text-xs text-paper/58"
+                    style={{ animationDelay: `${140 + index * 90}ms` }}
                   >
                     {tag}
                   </span>

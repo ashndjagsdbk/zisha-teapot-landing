@@ -1,8 +1,32 @@
 import { CalendarDays, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function StickyCTA() {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const cta = document.getElementById("cta");
+    if (!cta) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHidden(entry.isIntersecting);
+      },
+      { threshold: 0.28 }
+    );
+
+    observer.observe(cta);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="fixed inset-x-4 bottom-4 z-50 border border-paper/14 bg-black/72 p-2 text-paper shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur md:inset-x-auto md:right-6 md:top-6 md:bottom-auto">
+    <div
+      className={`fixed inset-x-4 bottom-4 z-50 border border-paper/14 bg-black/72 p-2 text-paper shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur transition duration-500 md:inset-x-auto md:right-6 md:top-6 md:bottom-auto ${
+        isHidden
+          ? "pointer-events-none translate-y-3 opacity-0 md:translate-x-3 md:translate-y-0"
+          : "translate-y-0 opacity-100 md:translate-x-0"
+      }`}
+    >
       <div className="grid grid-cols-2 gap-2 md:flex">
         <a
           href="#cta"

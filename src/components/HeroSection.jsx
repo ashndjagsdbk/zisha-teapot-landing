@@ -1,18 +1,22 @@
 import { ChevronDown } from "lucide-react";
 import CTAButton from "./CTAButton.jsx";
+import useScrollMotion from "../hooks/useScrollMotion.js";
 
 export default function HeroSection() {
+  const sectionRef = useScrollMotion("hero");
+
   return (
     <section
       id="hero"
+      ref={sectionRef}
       className="relative min-h-[100svh] overflow-hidden bg-[#060403] px-5 pb-16 pt-7 text-paper sm:px-8 lg:px-12"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_42%,rgba(210,170,109,0.18),transparent_30%),linear-gradient(90deg,rgba(6,4,3,0.96)_0%,rgba(6,4,3,0.72)_31%,rgba(6,4,3,0.08)_62%,rgba(6,4,3,0.46)_100%)]" />
-      <div className="absolute right-0 top-0 h-full w-full lg:w-[70%]">
+      <div className="hero-visual motion-soft absolute right-0 top-0 h-full w-full lg:w-[70%]">
         <img
           src="/images/hero/hero-main-teapot.png"
           alt="暗调窄光下的紫砂壶主视觉"
-          className="h-full w-full object-cover object-[62%_50%]"
+          className="hero-visual-image motion-soft h-full w-full object-cover object-[62%_50%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#060403_0%,rgba(6,4,3,0.62)_18%,rgba(6,4,3,0.02)_52%,rgba(6,4,3,0.42)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#060403] to-transparent" />
@@ -32,17 +36,17 @@ export default function HeroSection() {
         </header>
 
         <div className="grid min-h-[72svh] items-center py-14 lg:grid-cols-[0.42fr_0.58fr]">
-          <div className="hero-in max-w-xl">
-            <p className="mb-5 text-xs tracking-[0.34em] text-teaLight uppercase">
+          <div className="hero-copy-scroll motion-soft max-w-xl">
+            <p className="hero-sequence hero-sequence-kicker mb-5 text-xs tracking-[0.34em] text-teaLight uppercase">
               SINGLE PIECE ZISHA TEAPOT
             </p>
-            <h1 className="font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-8xl">
+            <h1 className="hero-sequence hero-sequence-title font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-8xl">
               一把壶的光
             </h1>
-            <p className="mt-7 max-w-md text-base leading-8 text-paper/70 sm:text-lg">
+            <p className="hero-sequence hero-sequence-body mt-7 max-w-md text-base leading-8 text-paper/70 sm:text-lg">
               暗调窄光中的单品紫砂壶。泥料、器型、工艺和时间，只服务于器物本身。
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="hero-sequence hero-sequence-cta mt-9 flex flex-col gap-3 sm:flex-row">
               <CTAButton href="#cta">预约鉴赏</CTAButton>
               <CTAButton href="#craft" variant="secondary">
                 查看工艺

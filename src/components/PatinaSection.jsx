@@ -6,24 +6,27 @@ const stages = [
     label: "新壶",
     title: "泥面收敛，光泽很低。",
     text: "预留新壶拍摄位。用于展示未泡养前的颗粒、哑光和泥料本色。",
-    image: "/images/patina/patina-01-new.png",
-    fallback: "/images/hero/hero-main-teapot.png"
+    image: "/images/patina-new.svg",
+    fallback: "/images/hero/hero-main-teapot.png",
+    imageTone: "brightness(0.58) contrast(1.12) saturate(0.62)"
   },
   {
     id: "30",
     label: "30 天",
     title: "高频接触处开始有轻微反光。",
     text: "预留 30 天状态拍摄位。重点看壶钮、壶把、壶身边缘的变化。",
-    image: "/images/patina/patina-02-30-days.png",
-    fallback: "/images/hero/hero-main-teapot.png"
+    image: "/images/patina-month.svg",
+    fallback: "/images/hero/hero-main-teapot.png",
+    imageTone: "brightness(0.66) contrast(1.12) saturate(0.74)"
   },
   {
     id: "180",
     label: "180 天",
     title: "表面逐渐统一，触感更温润。",
     text: "预留半年状态拍摄位。适合表现茶汤、手掌和日常使用留下的稳定光泽。",
-    image: "/images/patina/patina-03-180-days.png",
-    fallback: "/images/hero/hero-main-teapot.png"
+    image: "/images/patina-season.svg",
+    fallback: "/images/hero/hero-main-teapot.png",
+    imageTone: "brightness(0.76) contrast(1.16) saturate(0.88)"
   },
   {
     id: "long",
@@ -31,7 +34,8 @@ const stages = [
     title: "光泽从泥里透出来。",
     text: "长期泡养后的壶身更沉、更润，窄光下能看到时间参与过的表面。",
     image: "/images/patina/patina-04-long-term.png",
-    fallback: "/images/patina/patina-04-long-term.png"
+    fallback: "/images/patina/patina-04-long-term.png",
+    imageTone: "brightness(0.84) contrast(1.22) saturate(1.04)"
   }
 ];
 
@@ -67,10 +71,10 @@ export default function PatinaSection() {
                 key={stage.id}
                 type="button"
                 onClick={() => setActiveId(stage.id)}
-                className={`border px-4 py-3 text-left text-sm transition ${
+                className={`border px-4 py-3 text-left text-sm transition duration-300 ${
                   activeId === stage.id
-                    ? "border-teaLight bg-teaLight text-ink"
-                    : "border-paper/14 bg-paper/[0.04] text-paper/68 hover:border-paper/44"
+                    ? "border-teaLight bg-teaLight text-ink shadow-[0_0_28px_rgba(210,170,109,0.14)]"
+                    : "border-paper/14 bg-paper/[0.04] text-paper/68 hover:border-paper/44 hover:bg-paper/[0.07]"
                 }`}
               >
                 {stage.label}
@@ -80,6 +84,7 @@ export default function PatinaSection() {
         </div>
 
         <div className="relative min-h-[560px] overflow-hidden border border-paper/10 bg-black lg:min-h-[720px]">
+          <div key={activeStage.id} className="patina-panel absolute inset-0">
           <img
             src={activeStage.image}
             onError={(event) => {
@@ -88,6 +93,7 @@ export default function PatinaSection() {
             }}
             alt={`${activeStage.label}阶段壶身质感`}
             className="absolute inset-0 h-full w-full object-cover object-center"
+            style={{ filter: activeStage.imageTone }}
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,5,4,0.04),rgba(7,5,4,0.36)_72%,rgba(7,5,4,0.72))]" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
@@ -100,6 +106,7 @@ export default function PatinaSection() {
             <p className="mt-4 max-w-md text-base leading-8 text-paper/70">
               {activeStage.text}
             </p>
+          </div>
           </div>
         </div>
       </div>

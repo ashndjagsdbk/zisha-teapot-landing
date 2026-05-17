@@ -14,10 +14,15 @@ export default function CTAButton({
   return (
     <a
       href={href}
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-5 text-sm font-medium transition duration-300 ${styles} ${className}`}
+      className={`cta-link inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-5 text-sm font-medium transition duration-300 ${styles} ${className}`}
     >
       <span>{children}</span>
-      <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+      <ArrowRight
+        className="cta-arrow"
+        size={17}
+        strokeWidth={1.8}
+        aria-hidden="true"
+      />
     </a>
   );
 }
