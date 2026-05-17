@@ -1,11 +1,11 @@
 import SectionShell from "./SectionShell.jsx";
 
 const specs = [
-  ["泥料", "原矿泥料，颗粒与烧成状态可看"],
-  ["容量", "180ml 左右，适合日常茶席"],
-  ["结构", "壶嘴、壶盖、壶口细节可查"],
-  ["作品", "作者、底款、证书信息咨询核对"],
-  ["交付", "包装、养护说明、售后咨询"]
+  ["泥料", "原矿泥料，颗粒与烧成状态可确认"],
+  ["容量", "约 180ml，适合日常茶席"],
+  ["结构", "壶嘴、壶盖、壶口细节可查看"],
+  ["作品", "作者、底款、证书信息可核对"],
+  ["交付", "包装、养护说明与售后咨询"]
 ];
 
 export default function TrustSection() {
@@ -13,8 +13,8 @@ export default function TrustSection() {
     <SectionShell
       id="trust"
       eyebrow="TRUST"
-      title="像作品标签，不像促销参数。"
-      intro="信任信息要克制、可核对、可追问。把购买前真正需要确认的内容放清楚。"
+      title="少一点修辞，多一点可确认。"
+      intro="泥料、容量、结构、交付与售后，清楚列出，方便判断。"
       className="bg-[#0d0907]"
     >
       <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
