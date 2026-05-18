@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CTAButton({
   children,
-  href = "#cta",
+  href = "#contact",
   variant = "primary",
   className = ""
 }) {
@@ -14,7 +14,7 @@ export default function CTAButton({
   return (
     <a
       href={href}
-      className={`cta-link inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-5 text-sm font-medium transition duration-300 ${styles} ${className}`}
+      className={`cta-link inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-5 text-sm font-medium transition duration-300 hover:-translate-y-0.5 active:translate-y-0 ${styles} ${className}`}
     >
       <span>{children}</span>
       <ArrowRight

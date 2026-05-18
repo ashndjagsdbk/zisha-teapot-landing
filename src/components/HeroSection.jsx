@@ -47,7 +47,7 @@ export default function HeroSection() {
               暗调窄光中的单品紫砂壶。泥料、器型、工艺和时间，只服务于器物本身。
             </p>
             <div className="hero-sequence hero-sequence-cta mt-9 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href="#cta">预约鉴赏</CTAButton>
+              <CTAButton href="#contact">预约鉴赏</CTAButton>
               <CTAButton href="#craft" variant="secondary">
                 查看工艺
               </CTAButton>

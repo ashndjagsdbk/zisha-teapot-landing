@@ -3,13 +3,13 @@ import CTAButton from "./CTAButton.jsx";
 export default function CTASection() {
   return (
     <section
-      id="cta"
+      id="contact"
       className="relative overflow-hidden bg-[#060403] px-5 py-24 text-paper sm:px-8 lg:px-12 lg:py-32"
     >
       <img
-        src="/images/hero/hero-main-teapot.png"
-        alt="紫砂壶咨询预约背景"
-        className="absolute inset-y-0 right-0 h-full w-full object-cover object-[66%_50%] opacity-70 lg:w-[62%]"
+        src="/images/brand/qini-logo-clay-bg.png"
+        alt="栖泥品牌印记背景"
+        className="cta-bg motion-soft absolute inset-y-0 right-0 h-full w-full object-cover object-center opacity-24 [filter:brightness(0.65)_contrast(1.08)_saturate(0.85)] sm:opacity-34 lg:w-[62%] lg:object-[54%_50%] lg:opacity-52"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#060403_0%,rgba(6,4,3,0.92)_38%,rgba(6,4,3,0.28)_72%,rgba(6,4,3,0.68)_100%)]" />
 

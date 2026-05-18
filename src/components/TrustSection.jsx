@@ -5,32 +5,32 @@ const specs = [
   {
     label: "泥料",
     value: "原矿泥料，颗粒与烧成状态可确认",
-    note: "可先看泥面颗粒、收缩痕与窄光下的哑亮变化。"
+    note: "可通过局部图与烧成状态进一步确认。"
   },
   {
     label: "容量",
     value: "约 180ml，适合日常茶席",
-    note: "适合一至三人细品，不强调大容量冲泡。"
+    note: "适合日常茶席，具体容量可咨询确认。"
   },
   {
     label: "结构",
     value: "壶嘴、壶盖、壶口细节可查看",
-    note: "重点确认出水、开合、口盖和持握是否顺手。"
+    note: "壶嘴、壶盖、壶口细节可进一步查看。"
   },
   {
     label: "作品",
     value: "作者、底款、证书信息可核对",
-    note: "收藏前先核对底款、证书和作品来源。"
+    note: "作者、底款、证书信息可咨询核对。"
   },
   {
     label: "交付",
     value: "包装、养护说明与交付信息",
-    note: "交付前确认包装、养护方式和拍摄细节。"
+    note: "包装、养护说明与交付信息可提前确认。"
   },
   {
     label: "咨询",
     value: "邮箱咨询：2635222735@qq.com；微信：ggjgj424，确认泥料、容量、底款与交付信息。",
-    note: "可直接发送想确认的部位或茶席使用场景。"
+    note: "可通过邮箱或微信进一步确认细节。"
   }
 ];
 
@@ -54,37 +54,53 @@ export default function TrustSection() {
           />
         </div>
         <div className="border-y border-paper/[0.065]">
-          {specs.map((spec) => (
-            <button
-              key={spec.label}
-              type="button"
-              onClick={() =>
-                setOpenLabel((current) =>
-                  current === spec.label ? null : spec.label
-                )
-              }
-              className="group grid w-full grid-cols-[88px_1fr] gap-8 border-b border-paper/[0.055] py-8 text-left text-sm transition duration-300 last:border-b-0 hover:bg-paper/[0.035] sm:grid-cols-[132px_1fr] lg:cursor-default lg:py-10"
-              aria-expanded={openLabel === spec.label}
-            >
-              <p className="text-xs tracking-[0.26em] text-teaLight/82 transition duration-300 group-hover:text-teaLight">
-                {spec.label}
-              </p>
-              <div className="transition duration-300 group-hover:translate-x-1">
-                <p className="max-w-lg text-[15px] leading-8 text-paper/66">
-                  {spec.value}
-                </p>
+          {specs.map((spec) => {
+            const isOpen = openLabel === spec.label;
+
+            return (
+              <button
+                key={spec.label}
+                type="button"
+                onClick={() =>
+                  setOpenLabel((current) =>
+                    current === spec.label ? null : spec.label
+                  )
+                }
+                className={`group grid w-full grid-cols-[88px_1fr] gap-8 border-b py-8 text-left text-sm transition duration-300 last:border-b-0 hover:bg-paper/[0.03] sm:grid-cols-[132px_1fr] lg:cursor-default lg:py-10 ${
+                  isOpen
+                    ? "border-teaLight/20"
+                    : "border-paper/[0.055] hover:border-teaLight/24"
+                }`}
+                aria-expanded={isOpen}
+              >
                 <p
-                  className={`overflow-hidden text-sm leading-7 text-paper/46 transition-all duration-300 md:hidden ${
-                    openLabel === spec.label
-                      ? "mt-3 max-h-24 opacity-100"
-                      : "max-h-0 opacity-0"
+                  className={`text-xs tracking-[0.26em] transition duration-300 ${
+                    isOpen
+                      ? "text-teaLight"
+                      : "text-teaLight/82 group-hover:text-teaLight"
                   }`}
                 >
-                  {spec.note}
+                  {spec.label}
                 </p>
-              </div>
-            </button>
-          ))}
+                <div
+                  className={`transition duration-300 ${
+                    isOpen ? "translate-x-1" : "group-hover:translate-x-1"
+                  }`}
+                >
+                  <p className="max-w-lg text-[15px] leading-8 text-paper/66">
+                    {spec.value}
+                  </p>
+                  <p
+                    className={`overflow-hidden text-sm leading-7 text-paper/46 transition-all duration-300 md:hidden ${
+                      isOpen ? "mt-3 max-h-24 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    {spec.note}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
     </SectionShell>

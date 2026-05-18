@@ -8,7 +8,7 @@ const stages = [
     text: "预留新壶拍摄位。用于展示未泡养前的颗粒、哑光和泥料本色。",
     image: "/images/patina-new.svg",
     fallback: "/images/hero/hero-main-teapot.png",
-    imageTone: "brightness(0.58) contrast(1.12) saturate(0.62)"
+    imageTone: "brightness(0.86) contrast(1.08) saturate(0.8)"
   },
   {
     id: "30",
@@ -17,7 +17,7 @@ const stages = [
     text: "预留 30 天状态拍摄位。重点看壶钮、壶把、壶身边缘的变化。",
     image: "/images/patina-month.svg",
     fallback: "/images/hero/hero-main-teapot.png",
-    imageTone: "brightness(0.66) contrast(1.12) saturate(0.74)"
+    imageTone: "brightness(0.9) contrast(1.1) saturate(0.9)"
   },
   {
     id: "180",
@@ -26,7 +26,7 @@ const stages = [
     text: "预留半年状态拍摄位。适合表现茶汤、手掌和日常使用留下的稳定光泽。",
     image: "/images/patina-season.svg",
     fallback: "/images/hero/hero-main-teapot.png",
-    imageTone: "brightness(0.76) contrast(1.16) saturate(0.88)"
+    imageTone: "brightness(0.96) contrast(1.12) saturate(1)"
   },
   {
     id: "long",
@@ -35,7 +35,7 @@ const stages = [
     text: "长期泡养后的壶身更沉、更润，窄光下能看到时间参与过的表面。",
     image: "/images/patina/patina-04-long-term.png",
     fallback: "/images/patina/patina-04-long-term.png",
-    imageTone: "brightness(0.84) contrast(1.22) saturate(1.04)"
+    imageTone: "brightness(1.02) contrast(1.16) saturate(1.08)"
   }
 ];
 
@@ -66,18 +66,22 @@ export default function PatinaSection() {
           </p>
 
           <div className="mt-10 grid max-w-md grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-2">
-            {stages.map((stage) => (
+            {stages.map((stage, index) => (
               <button
                 key={stage.id}
                 type="button"
                 onClick={() => setActiveId(stage.id)}
-                className={`border px-4 py-3 text-left text-sm transition duration-300 ${
+                aria-pressed={activeId === stage.id}
+                className={`group border px-4 py-3 text-left text-sm transition duration-300 ${
                   activeId === stage.id
-                    ? "border-teaLight bg-teaLight text-ink shadow-[0_0_28px_rgba(210,170,109,0.14)]"
-                    : "border-paper/14 bg-paper/[0.04] text-paper/68 hover:border-paper/44 hover:bg-paper/[0.07]"
+                    ? "translate-y-[-2px] border-teaLight bg-teaLight text-ink shadow-[0_0_28px_rgba(210,170,109,0.12)]"
+                    : "border-paper/14 bg-paper/[0.04] text-paper/68 hover:border-teaLight/38 hover:bg-paper/[0.07] hover:text-paper"
                 }`}
               >
-                {stage.label}
+                <span className="block text-[0.65rem] tracking-[0.24em] opacity-58 transition duration-300 group-hover:opacity-100">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="mt-1 block">{stage.label}</span>
               </button>
             ))}
           </div>
@@ -92,7 +96,7 @@ export default function PatinaSection() {
               event.currentTarget.src = activeStage.fallback;
             }}
             alt={`${activeStage.label}阶段壶身质感`}
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="patina-image absolute inset-0 h-full w-full object-cover object-center"
             style={{ filter: activeStage.imageTone }}
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,5,4,0.04),rgba(7,5,4,0.36)_72%,rgba(7,5,4,0.72))]" />

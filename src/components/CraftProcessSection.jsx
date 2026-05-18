@@ -79,6 +79,16 @@ export default function CraftProcessSection() {
       intro="泥料、重心、线条与出水，决定一把壶是否真正好用。"
       className="bg-[#100b08]"
     >
+      <div className="mb-6 flex items-center gap-3 text-xs tracking-[0.26em] text-paper/42">
+        <span className="text-teaLight">{steps[activeIndex].number}</span>
+        <div className="h-px flex-1 bg-paper/[0.07]">
+          <div
+            className="h-px bg-teaLight/52 transition-all duration-500"
+            style={{ width: `${((activeIndex + 1) / steps.length) * 100}%` }}
+          />
+        </div>
+        <span>{String(steps.length).padStart(2, "0")}</span>
+      </div>
       <div
         ref={stripRef}
         className="craft-strip -mx-5 flex gap-4 overflow-x-auto border-y border-paper/[0.07] px-5 py-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-[calc((100vw-min(80rem,100vw-6rem))/2)]"
@@ -88,17 +98,22 @@ export default function CraftProcessSection() {
             <article
               key={step.number}
               data-craft-card
-              className={`relative min-h-[560px] shrink-0 basis-[82vw] snap-center overflow-hidden border border-paper/[0.06] bg-[#070504] transition duration-700 sm:basis-[70vw] lg:min-h-[680px] lg:basis-[min(72vw,860px)] ${
+              className={`craft-card relative min-h-[560px] shrink-0 basis-[82vw] snap-center overflow-hidden border bg-[#070504] transition duration-700 sm:basis-[70vw] lg:min-h-[680px] lg:basis-[min(72vw,860px)] ${
                 activeIndex === index
-                  ? "opacity-100"
-                  : "opacity-[0.48] brightness-[0.78]"
+                  ? "border-teaLight/30 opacity-100"
+                  : "border-paper/[0.06] opacity-[0.48] brightness-[0.78]"
               }`}
             >
+              <div
+                className={`absolute inset-x-0 top-0 z-20 h-px transition duration-700 ${
+                  activeIndex === index ? "bg-teaLight/54" : "bg-paper/[0.06]"
+                }`}
+              />
               <img
                 src={step.image}
                 alt={`${step.title}工艺画面`}
                 className={`motion-soft absolute inset-0 h-full w-full object-cover transition duration-700 ${
-                  activeIndex === index ? "scale-[1.035]" : "scale-100"
+                  activeIndex === index ? "scale-[1.04]" : "scale-100"
                 }`}
                 style={{ filter: "brightness(0.65) contrast(1.1) saturate(0.8)" }}
               />
@@ -106,7 +121,9 @@ export default function CraftProcessSection() {
               <div className="absolute inset-x-0 top-0 h-px bg-paper/[0.06]" />
 
               <div className="relative z-10 flex min-h-[560px] flex-col justify-end p-7 lg:min-h-[680px] lg:p-9">
-                <p className="text-xs tracking-[0.3em] text-teaLight">
+                <p className={`text-xs tracking-[0.3em] transition duration-500 ${
+                  activeIndex === index ? "text-teaLight" : "text-paper/46"
+                }`}>
                   {step.number}
                 </p>
                 <h3 className="mt-5 font-serif text-3xl">{step.title}</h3>

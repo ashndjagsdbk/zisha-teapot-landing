@@ -5,7 +5,7 @@ export default function StickyCTA() {
   const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
-    const cta = document.getElementById("cta");
+    const cta = document.getElementById("contact");
     if (!cta) return undefined;
 
     const observer = new IntersectionObserver(
@@ -29,14 +29,14 @@ export default function StickyCTA() {
     >
       <div className="grid grid-cols-2 gap-2 md:flex">
         <a
-          href="#cta"
+          href="#contact"
           className="inline-flex items-center justify-center gap-2 bg-teaLight px-4 py-3 text-sm font-medium text-ink transition hover:bg-[#e3bb78]"
         >
           <CalendarDays size={16} aria-hidden="true" />
           预约鉴赏
         </a>
         <a
-          href="#cta"
+          href="#contact"
           className="inline-flex items-center justify-center gap-2 border border-paper/18 px-4 py-3 text-sm font-medium text-paper/82 transition hover:border-teaLight/60 hover:text-paper"
         >
           <MessageCircle size={16} aria-hidden="true" />
